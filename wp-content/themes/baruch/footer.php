@@ -1,5 +1,5 @@
 <?php wp_footer(); ?>
-<footer>
+<!--<footer>
 	<div class="footer-background">
 		<div class="container-fluid">
 			<div class="row">
@@ -17,10 +17,10 @@
 						<i class="fa fa-linkedin"></i>
 					</a>
 				</div>
-			</div><!-- end row -->
-		</div><!-- end container -->
+			</div>
+		</div>
 	</div>
-</footer>
+</footer>-->
 <!-- end Footer -->
 
 <!-- ===== JAVASCRIPTS ===== -->

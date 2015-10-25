@@ -103,7 +103,7 @@
 						<div class="navbar-header">
 							<!-- Brand -->
 							<a href="<?php bloginfo( 'url' ); ?>" class="navbar-brand">
-								<div class="css-logo"></div> <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/logo.png" class="raleway-logo" alt="Raleway Responsive Parallax Bootstrap 3 Template">
+								<div class="css-logo"></div>
 							</a>
 							<!-- Mobile Navigation -->
 							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
@@ -124,7 +124,7 @@
 	'container'       => '',
 	'container_class' => '',
 	'container_id'    => '',
-	'menu_class'      => 'nav navbar-nav navbar-right',
+	'menu_class'      => 'nav navbar-nav navbar-left',
 	'menu_id'         => '',
 	'echo'            => true,
 	'fallback_cb'     => 'wp_page_menu',

@@ -4,20 +4,41 @@
     <div class="home-background parallax-section">
         <div class="container-fluid">
             <div class="row">
+                <?php
+
+                $args = array( 'post_type' => 'team', 'posts_per_page' => 1, 'category_name'=>'accueil' );
+                $loop = new WP_Query( $args );
+                global $more;
+
+
+                if(have_posts()): while ( $loop->have_posts() ) : $loop->the_post();
+
+                    $facebook = get_post_meta($post->ID,'_facebook',true);
+                    $linkedin = get_post_meta($post->ID,'_linkedin',true);
+                    $github = get_post_meta($post->ID,'_github',true);
+                    $twitter = get_post_meta($post->ID,'_twitter',true);
+                    $mail = get_post_meta($post->ID,'_mail',true);
+
+                    ?>
                 <div class="home-box col-xs-12">
                     <div>
-                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/avatar.jpg" alt="">
-                        <h1><?php echo get_bloginfo( "name"); ?></h1>
-                        <p><?php echo get_bloginfo( "description"); ?></p>
+                        <?php the_post_thumbnail('accueil'); ?>
+                        <!--<img src="/images/avatar.jpg" alt="">-->
+                        <h1><?php the_title(); ?></h1>
+                        <p><?php the_content(); ?></p>
+
                     </div>
                     <div class="social">
                         <ul>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="<?php echo $facebook ?>"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="<?php echo $twitter ?>"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="<?php echo $linkedin ?>"><i class="fa fa-linkedin"></i></a></li>
+                           <!-- <li><a href="<?php /*echo $github */?>"><i class="fa fa-github-alt"></i></a></li>-->
+                            <li><a href="mailto:<?php echo $mail ?>"><i class="fa fa-envelope"></i></a></li>
                         </ul>
                     </div>
                 </div>
+                <?php endwhile; endif;?>
             </div><!-- end row -->
         </div><!-- end container -->
     </div>
@@ -25,12 +46,15 @@
 <!-- end Home -->
 
 <!-- Education -->
+<?php /*
 <section id="education">
     <div class="container-fluid">
         <div class="row">
             <div class="section-background col-xs-12 col-sm-6" data-mh="match-edu">
-                <h2>Education</h2>
-                <ul class="resume-box">
+                <!--<h2>A propos</h2>-->
+
+
+                <!--<ul class="resume-box">
                     <li>
                         <div class="year" data-mh="match-edu-box-1">
                             <div>
@@ -67,7 +91,7 @@
                             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
                         </div>
                     </li>
-                </ul>
+                </ul>-->
             </div>
             <!-- Skills -->
             <div class="skills-background col-xs-12 col-sm-6" style="height:640px">
@@ -97,7 +121,8 @@
 </section>
 <!-- end Education -->
 
-
+*/
+?>
 
 <!-- Portfolio -->
 <?php /*

@@ -5,8 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="author" content="">
+    <meta name="author" content="Baruch Amoussou-Djangban">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title><?php wp_title( '|', true, 'right' ); ?></title>
@@ -52,7 +51,7 @@
 
 <header>
     <!-- Toggle Menu -->
-    <button class="toggle-btn">
+    <!--<button class="toggle-btn">
         <span class="lines"></span>
     </button>
     <div class="menu">
@@ -67,6 +66,6 @@
                 <a href="#">Blog</a>
             </li>
         </ul>
-    </div>
+    </div>-->
     <!-- end Toggle menu -->
 </header>
